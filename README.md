@@ -5,7 +5,7 @@
 
 This reference implementation facilitates a hybrid DID method that combines the best of the Ethereum blockchain and IPFS.
 
-The goal of this method is to minimize the amount of storage used, and transactions made on the Blockchain to maximize efficency. This is attempted by only storing the necessaries on the chain, such as the controller address, and IPFS pointers to more cryptographic material.
+The goal of this method is to minimize the amount of storage used, and transactions made on the Blockchain. This is attempted by only storing the necessaries on the chain such as the controller address and IPFS pointers.
 
 Here is an overview of the method:
 
@@ -41,7 +41,7 @@ Here is an overview of the method:
 
     // Choose a Secp256k1 key pair for authorization.
     let authPrivateKey = "80226bf3ec016b9d3b7d9037fe3008889977a57f43e9bb8484d59f77c58e9777";
-    let authPublicKey = "04f88e3cec86d4b5f6c731a1e42a0f81ec821413ce1b87f605bf3cc16a3d39715a039201a4b32e57d744163cb04034c2b47816d3e29e173f5af8"347642126849d2"";
+    let authPublicKey = "04f88e3cec86d4b5f6c731a1e42a0f81ec821413ce1b87f605bf3cc16a3d39715a039201a4b32e57d744163cb04034c2b47816d3e29e173f5af8347642126849d2"";
 
     // Create the DID.
     let did = await EthBDID.create(ethPrivateKey, ethAddress, athPrivateKey, authPublicKey, rpcProvider);
