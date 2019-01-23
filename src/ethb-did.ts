@@ -299,6 +299,10 @@ export class EthBDID {
     return this.didUri;
   }
 
+  public getController(): string {
+    return this.controller;
+  }
+
   /*
   * Public static functions.
   */
