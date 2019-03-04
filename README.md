@@ -1,7 +1,7 @@
 
 # EthB-DID Library
 
-> A library to create and manage Ethb-DIDs.
+> A library for the creation and management Ethb-DIDs.
 
 This reference implementation facilitates a hybrid DID method that combines the best of the Ethereum blockchain and IPFS.
 
