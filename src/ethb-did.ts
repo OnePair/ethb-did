@@ -351,7 +351,6 @@ export class EthBDID {
   public static resolve(didUri: string, provider: Provider): Promise<EthBDID> {
     return new Promise(async (onSuccess: Function, onError: Function) => {
       try {
-        let bytecode = EthBDID.getBytecode();
         let abi = EthBDID.getAbi();
 
         // Fetch the contract
