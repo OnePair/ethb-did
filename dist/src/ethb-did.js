@@ -42,13 +42,7 @@ var ethers_1 = require("ethers");
 var ipfs_revocation_list_1 = require("./ipfs-revocation-list");
 var authorization_key_1 = require("./authorization-key");
 var processor_1 = require("./processor");
-/*if (version !== undefined) { comment this out in index.js
-  var message = 'More than one instance of bitcore-lib found. ' +
-    'Please make sure to require bitcore-lib and check that submodules do' +
-    ' not also include their own bitcore-lib dependency.';
-  throw new Error(message);
-}*/
-var ipfs_api_1 = __importDefault(require("ipfs-api"));
+var ipfs_http_client_1 = __importDefault(require("ipfs-http-client"));
 var jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 var key_encoder_1 = __importDefault(require("key-encoder"));
 var fs_1 = __importDefault(require("fs"));
@@ -421,7 +415,7 @@ var EthBDID = /** @class */ (function () {
     */
     EthBDID.connectToIpfs = function (apiUrl) {
         if (EthBDID.ipfsApi == undefined)
-            EthBDID.ipfsApi = ipfs_api_1.default(apiUrl);
+            EthBDID.ipfsApi = ipfs_http_client_1.default(apiUrl);
     };
     /*
     * The private functions.

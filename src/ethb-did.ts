@@ -3,14 +3,9 @@ import { Provider } from "ethers/providers";
 import { IPFSRevocationList } from "./ipfs-revocation-list";
 import { AuthorizationKey } from "./authorization-key";
 import { Processor } from "./processor";
-/*if (version !== undefined) { comment this out in index.js
-  var message = 'More than one instance of bitcore-lib found. ' +
-    'Please make sure to require bitcore-lib and check that submodules do' +
-    ' not also include their own bitcore-lib dependency.';
-  throw new Error(message);
-}*/
 
-import IPFSApi from "ipfs-api";
+
+import IPFSApi from "ipfs-http-client";
 import jwt from "jsonwebtoken";
 import KeyEncoder from "key-encoder";
 import EthCrypto from "eth-crypto";

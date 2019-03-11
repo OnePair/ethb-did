@@ -68,7 +68,10 @@ var AuthorizationKey = /** @class */ (function () {
                         }
                         else {
                             _this.address = fileInfo[0]["hash"];
-                            onSuccess(_this.address);
+                            // Pin to the node
+                            ethb_did_1.EthBDID.ipfsApi.pin.add(_this.address, function () {
+                                onSuccess(_this.address);
+                            });
                         }
                     });
                 }

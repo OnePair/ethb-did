@@ -33,7 +33,11 @@ export class AuthorizationKey {
             onError(err)
           } else {
             this.address = fileInfo[0]["hash"];
-            onSuccess(this.address);
+
+            // Pin to the node
+            EthBDID.ipfsApi.pin.add(this.address, () => {
+              onSuccess(this.address);
+            });
           }
         });
       } catch (err) {
